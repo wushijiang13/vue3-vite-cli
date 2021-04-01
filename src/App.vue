@@ -10,7 +10,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'App',
   setup(){
-    function goActivity():void{
+    function goActivity(this:any):void{
       this.$router.push('/activity');
     }
     return{
