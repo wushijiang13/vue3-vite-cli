@@ -9,11 +9,11 @@
     export default defineComponent ({
         name:"index",
         setup(){
-            let msg:string=ref('Hello Vue 3 + TypeScript + Vite,这是首页').value;
+            let msg=ref('Hello Vue 3 + TypeScript + Vite,这是首页');
             return{
                 msg,
             }
-        },
+        }
     })
 </script>
 
