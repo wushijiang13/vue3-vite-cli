@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view to="/"/>
     <button @click="goActivity">跳转</button>
   </div>
 </template>
