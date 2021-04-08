@@ -1,8 +1,7 @@
-import {ElButton, ElSelect} from 'element-plus';
-import {app} from '../vue/app';
+import {ElButton} from 'element-plus';
+import {app} from '../vue/app'
 
-app.component(ElButton.name,ElButton)
-app.component(ElSelect.name,ElSelect)
+console.log(app);
 
-
+app.component(ElButton.name,ElButton);
 
