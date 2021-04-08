@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <router-view to="/"/>
-    <el-button @click="goActivity">跳转</el-button>
+    <el-button @click="goActivity(this)">跳转</el-button>
     <el-button>默认按钮</el-button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent} from 'vue';
 export default defineComponent({
   name: 'App',
-  setup(this:any){
-    console.log(this);
+  setup(){
+    //引入element的小坑 外面需要传入this
+    //因为el-button 调用后没有传入this 导致this.$router 报错
     function goActivity(this:any):void{
-      // console.log(this);
       this.$router.push('/activity');
     }
     return{
