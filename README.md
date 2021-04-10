@@ -1,8 +1,8 @@
 #Vue 3 + Vite + Typescript  
 <table>
-  <tbody>
+  <tbody align="center">
     <tr>
-    <td align="center" valign="middle">
+    <td valign="middle">
             <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
                <img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
              </a>  
@@ -46,13 +46,14 @@
 详情可切换分支查看，所有分支都通过了编译测试。
 
 ###运行
+
 ```
- #进入项目目录
+ # 进入项目目录
  cd vite-vue3-cli 
  
- #下载依赖
+ # 下载依赖
  npm i
 
- #运行项目
+ # 运行项目
  npm run dev
 ```

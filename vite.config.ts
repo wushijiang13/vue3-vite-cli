@@ -10,7 +10,6 @@ export default defineConfig({
           libs: [{
               libraryName: 'element-plus',
               resolveStyle: (name:any) => {
-                  console.log(name);
                   name = name.slice(3);
                   //name = name.splice(3) 这是官方的按需引入的处理写法,有误。
                   //这里按需引入强调几句

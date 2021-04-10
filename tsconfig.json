@@ -13,5 +13,5 @@
     "noImplicitThis": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["src/config/lazy_ui/*.ts"]
+  "exclude": ["src/config/lazy_ui/*.ts","node_modules"]
 }

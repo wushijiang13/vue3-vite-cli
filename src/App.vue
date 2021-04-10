@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view to="/"/>
-    <el-button @click="goActivity(this)">跳转</el-button>
+    <el-button @click="goActivity()">跳转</el-button>
     <el-button>默认按钮</el-button>
   </div>
 </template>
