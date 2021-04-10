@@ -2,11 +2,6 @@
 <table>
   <tbody align="center">
     <tr>
-    <td valign="middle">
-            <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
-               <img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
-             </a>  
-          </td>
       <td align="center" valign="middle">
         <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
            <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
@@ -45,7 +40,7 @@
 
 详情可切换分支查看，所有分支都通过了编译测试。
 
-###运行
+<h3>运行</h3>
 
 ```
  # 进入项目目录
