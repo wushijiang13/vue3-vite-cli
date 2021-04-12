@@ -1,12 +1,11 @@
-<p align="center">#Vue 3 + Vite + Typescript</p>
-<div>
+<p align="center">
       <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
                <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
       </a>
        <a href="https://www.tslang.cn/" target="_blank" rel="noopener noreferrer">
                  <img width="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" alt="Ts logo">
                </a>
-</div>
+</p>
 
 <p align="center">
     <a href="https://github.com/vuejs/vue-next">
@@ -22,6 +21,8 @@
         <img src="https://img.shields.io/badge/typescript-4.1.3-brightgreen.svg" alt="typescript">
     </a>
 </p>
+
+<p>#Vue 3 + Vite + Typescript</p>
 
 ***
 
