@@ -21,7 +21,18 @@ export default defineConfig({
               resolveComponent: (name) => {
                   return `element-plus/lib/${name}`;
               },
-          }]
+          }, {
+              libraryName: 'ant-design-vue',
+              resolveStyle: (name:any) => {
+                    //这里我没有引入less的css 文件因为我已经安装过了sass 不想重复安装一个预编译器。
+                    //如果您的项目只需要ant 或者 两者都需要，请使用less。
+                   return `ant-design-vue/es/${name}/style/index.css`;
+              },
+              resolveComponent: (name) => {
+                  return `ant-design-vue/es/${name}/index.js`;
+              },
+              },
+          ]
       })
   ],
   base:"./",

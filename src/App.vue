@@ -3,6 +3,9 @@
     <router-view to="/"/>
     <el-button @click="goActivity()">跳转</el-button>
     <el-button>默认按钮</el-button>
+    <a-button type="primary">
+     ant的引入
+    </a-button>
   </div>
 </template>
 
