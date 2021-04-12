@@ -1,21 +1,12 @@
-#Vue 3 + Vite + Typescript  
-<table>
-  <tbody align="center">
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-           <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
-         </a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="https://www.tslang.cn/" target="_blank" rel="noopener noreferrer">
-           <img width="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" alt="Ts logo">
-         </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+<p align="center">#Vue 3 + Vite + Typescript</p>
+<div>
+      <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+               <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
+      </a>
+       <a href="https://www.tslang.cn/" target="_blank" rel="noopener noreferrer">
+                 <img width="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" alt="Ts logo">
+               </a>
+</div>
 
 <p align="center">
     <a href="https://github.com/vuejs/vue-next">
