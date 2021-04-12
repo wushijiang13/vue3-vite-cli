@@ -22,9 +22,7 @@
     </a>
 </p>
 
-<p>#Vue 3 + Vite + Typescript</p>
-
-***
+# Vue3 + Vite + Typescript
 
 基于vue3 + ts + vite  开发  
 1.0.0.1-vue-router >  引入了vue-router4  
