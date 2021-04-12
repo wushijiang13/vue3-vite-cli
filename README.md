@@ -25,9 +25,9 @@
 # Vue3 + Vite + Typescript
 
 基于vue3 + ts + vite  开发  
-1.0.0.1-vue-router >  引入了vue-router4  
-2.0.0.2-vuex > 引入了vuex4  
-3.0.0.3-element-plus > 按需引入element plus 
+1.<a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.1-vue-router">0.0.1-vue-router</a> >  引入了vue-router4  
+2.<a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.2-vuex">0.0.2-vuex</a>> 引入了vuex4  
+3.<a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.3-element-plus">0.0.3-element-plus</a> > 按需引入element plus 
 
 详情可切换分支查看，所有分支都通过了编译测试。
 
