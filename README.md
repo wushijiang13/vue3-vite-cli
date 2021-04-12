@@ -21,7 +21,7 @@
         <img src="https://img.shields.io/badge/typescript-4.1.3-brightgreen.svg" alt="typescript">
     </a>
     <a href="https://github.com/vueComponent/ant-design-vue">
-        <img src="https://img.shields.io/badge/antDesignVue-2.1.2-brightgreen.svg" alt="ant-design-vue">
+        <img src="https://img.shields.io/badge/antDesign-2.1.2-brightgreen.svg" alt="ant-design-vue">
     </a>
 </p>
 
