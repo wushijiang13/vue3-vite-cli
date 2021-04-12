@@ -27,7 +27,7 @@
 
 # Vue3 + Vite + Typescript
 
-基于vue3 + ts + vite  开发   
+基于vue3 + vite + ts  开发   
 
 ## 分支目录
     
