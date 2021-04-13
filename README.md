@@ -23,6 +23,9 @@
     <a href="https://github.com/vueComponent/ant-design-vue">
         <img src="https://img.shields.io/badge/antDesignVue-2.1.2-brightgreen.svg" alt="ant-design-vue">
     </a>
+    <a href="https://github.com/youzan/vant">
+        <img src="https://img.shields.io/badge/vant-3.0.13-brightgreen.svg" alt="vant">
+    </a>
 </p>
 
 # Vue3 + Vite + Typescript
@@ -43,6 +46,9 @@
     </li>
     <li>
     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.4-ant-design-vue">0.0.4-ant-design-vue</a> > 按需引入ant-design-vue
+    </li>
+    <li>
+    <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.5-vant">0.0.5-vant</a> > 按需引入 vant v3
     </li>
 </ul> 
 
