@@ -31,7 +31,16 @@ export default defineConfig({
               resolveComponent: (name) => {
                   return `ant-design-vue/es/${name}/index.js`;
               },
+          }, {
+              libraryName: 'vant',
+              resolveStyle: (name:any) => {
+                   //这里less和上面说明一样
+                   return `vant/es/${name}/index.css`;
               },
+              resolveComponent: (name) => {
+                   return `vant/es/${name}/index.js`;
+              },
+          },
           ]
       })
   ],
