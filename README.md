@@ -12,7 +12,7 @@
         <img src="https://img.shields.io/badge/vue3-3.0.5-brightgreen.svg" alt="vue">
     </a>
     <a href="https://github.com/element-plus/element-plus">
-        <img src="https://img.shields.io/badge/elementPlus-1.0.2beta.36-brightgreen.svg" alt="element-plus">
+        <img src="https://img.shields.io/badge/elementPlus-1.0.2beta.39-brightgreen.svg" alt="element-plus">
     </a>
     <a href="https://github.com/vitejs/vite">
         <img src="https://img.shields.io/badge/vite-2.1.5-brightgreen.svg" alt="vite">
