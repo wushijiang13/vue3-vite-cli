@@ -4,6 +4,7 @@ import {store} from './store/store'
 //引入所有按需引入的UI库,只需要调用一下即可,内部会完成全局声明
 import './config/lazy_ui/lazy_ui';
 
+console.log(import.meta.env.MODE);
 
 app.config.globalProperties.allText='测试全局';
 

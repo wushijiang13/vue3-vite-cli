@@ -1,7 +1,9 @@
 import axios from 'axios'
+import {baseUrl} from './api/api_config'
+
 
 const vueAxios=axios.create({
-    baseURL:"http://localhost:3000",
+    baseURL:baseUrl,
     timeout: 30000,
     headers:{
         "Content-Type":"application/json",
