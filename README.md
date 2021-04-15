@@ -51,7 +51,7 @@
     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.5-vant">0.0.5-vant</a> > 按需引入 vant v3
     </li>
      <li>
-     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.6-vant">0.0.6-axios</a> > 引入了axios
+     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.6-axios">0.0.6-axios</a> > 引入了axios
      </li>
 </ul> 
 
