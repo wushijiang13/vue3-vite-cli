@@ -26,6 +26,12 @@
     <a href="https://github.com/youzan/vant">
         <img src="https://img.shields.io/badge/vant-3.0.13-brightgreen.svg" alt="vant">
     </a>
+    <a href="https://github.com/axios/axios">
+        <img src="https://img.shields.io/badge/axios-0.21.1-brightgreen.svg" alt="axios">
+    </a>
+    <a href="https://github.com/intlify/vue-i18n-next">
+        <img src="https://img.shields.io/badge/vue-i18n-9.1.6-brightgreen.svg" alt="vue-i18n">
+    </a>
 </p>
 
 # Vue3 + Vite + Typescript
@@ -52,6 +58,9 @@
     </li>
      <li>
      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.6-axios">0.0.6-axios</a> > 引入了axios
+     </li>
+     <li>
+     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.7-vue-i18n">0.0.7-vue-i18n</a> > 引入了vue-i18n
      </li>
 </ul> 
 
