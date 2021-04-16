@@ -26,6 +26,7 @@
     <a href="https://github.com/youzan/vant">
         <img src="https://img.shields.io/badge/vant-3.0.13-brightgreen.svg" alt="vant">
     </a>
+    <br/>
     <a href="https://github.com/axios/axios">
         <img src="https://img.shields.io/badge/axios-0.21.1-brightgreen.svg" alt="axios">
     </a>
