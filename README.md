@@ -30,7 +30,7 @@
         <img src="https://img.shields.io/badge/axios-0.21.1-brightgreen.svg" alt="axios">
     </a>
     <a href="https://github.com/intlify/vue-i18n-next">
-        <img src="https://img.shields.io/badge/vue-i18n-next-9.1.6-brightgreen.svg" alt="vue-i18n-next">
+        <img src="https://img.shields.io/badge/vueI18n-9.1.6-brightgreen.svg" alt="vue-i18n-next">
     </a>
 </p>
 
