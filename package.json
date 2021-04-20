@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "esbuild": "^0.11.12",
     "vue": "^3.0.5",
     "vue-router": "^4.0.5",
     "vuex": "^4.0.0"
