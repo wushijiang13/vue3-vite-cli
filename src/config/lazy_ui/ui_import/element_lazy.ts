@@ -1,6 +1,10 @@
-import {ElButton} from 'element-plus';
+import {ElButton,ElPagination,locale} from 'element-plus';
+import lang from 'element-plus/lib/locale/lang/zh-cn'
 import {app} from '../../vue/app'
-
 // @vue-ignore
-app.component(ElButton.name,ElButton);
+locale(lang);
+[ElButton,ElPagination].forEach(component => {
+    app.component(component.name, component)
+})
+
 

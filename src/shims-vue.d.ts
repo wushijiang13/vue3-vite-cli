@@ -14,3 +14,10 @@ declare module '*.tiff'
 
 declare const allText:string
 
+
+
+
+
+
+
+

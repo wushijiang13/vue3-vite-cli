@@ -1,5 +1,7 @@
 import {RouteRecordRaw} from 'vue-router'
-const routes:Array<RouteRecordRaw>=[
+import {module1_router} from "../module/module1/router/module1_router";
+
+let routers:Array<RouteRecordRaw>=[
     {
         path:'/',
         name:'index',
@@ -11,4 +13,8 @@ const routes:Array<RouteRecordRaw>=[
         component:()=>import('../page/activity.vue'),
     }
 ]
-export { routes };
+
+//多模块合成一个项目的引用，如果模块过多的话，可通过循环添加。
+routers =routers.concat(module1_router);
+
+export { routers };

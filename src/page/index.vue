@@ -5,6 +5,17 @@
         <el-button @click="goActivity()">{{ $t('index.jumps')}}</el-button>
         <el-button>{{ $t('index.defaultBtn')}}</el-button>
 
+        <p>Element-Plus 内置的多语言中文展示</p>
+        <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="4"
+                :page-sizes="[100, 200, 300, 400]"
+                :page-size="100"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="400">
+        </el-pagination>
+
         <p> Ant-Design-Vue 2.x 使用</p>
         <a-button type="primary">
             ant的引入
@@ -23,6 +34,10 @@
 
         <p>I18n v9 使用</p>
         <el-button   @click="switchLanguage()">切换{{store.state.languages  == 'zh' ? "中文" : "英文"}}</el-button>
+
+        <p>测试多打包引入路由后跳转</p>
+        <el-button   @click="goModule1Index()">跳转到module1_index</el-button>
+
     </div>
 </template>
 
@@ -40,16 +55,33 @@
             let i18n:any=useI18n();
 
             function switchLanguage(this:any):void{
+                console.log(import.meta.env);
                 this.store.commit('setLang',(store.state.languages == LanginTerval.ZH ? LanginTerval.EN : LanginTerval.ZH));
                 i18n.locale.value=store.state.languages;
             }
             function goActivity(this:any):void{
                 this.$router.push('/activity');
             }
+            
+            function goModule1Index(this:any) {
+                console.log(this.$router);
+                this.$router.push('/module1_index');
+            }
+            
+           function handleSizeChange(val:any) {
+                console.log(`每页 ${val} 条`);
+            }
+
+            function handleCurrentChange(val:any) {
+                console.log(`当前页: ${val}`);
+            }
             return{
                 msg,
                 goActivity,
                 switchLanguage,
+                goModule1Index,
+                handleSizeChange,
+                handleCurrentChange,
                 store,
             }
         }

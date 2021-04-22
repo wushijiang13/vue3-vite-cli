@@ -12,10 +12,10 @@
         <img src="https://img.shields.io/badge/vue3-3.0.5-brightgreen.svg" alt="vue">
     </a>
     <a href="https://github.com/element-plus/element-plus">
-        <img src="https://img.shields.io/badge/elementPlus-1.0.2beta.39-brightgreen.svg" alt="element-plus">
+        <img src="https://img.shields.io/badge/elementPlus-1.0.2beta.40-brightgreen.svg" alt="element-plus">
     </a>
     <a href="https://github.com/vitejs/vite">
-        <img src="https://img.shields.io/badge/vite-2.1.5-brightgreen.svg" alt="vite">
+        <img src="https://img.shields.io/badge/vite-2.2.1-brightgreen.svg" alt="vite">
     </a>
     <a href="https://github.com/microsoft/TypeScript">
         <img src="https://img.shields.io/badge/typescript-4.1.3-brightgreen.svg" alt="typescript">
@@ -63,6 +63,9 @@
      <li>
      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.7-vue-i18n">0.0.7-vue-i18n</a> > 引入了vue-i18n
      </li>
+      <li>
+      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.8-pack-more">0.0.8-pack-more</a> > 项目结构修改为多模块打包机制。
+      </li>
 </ul> 
 
 详情可切换分支查看，所有分支都通过了编译测试。
@@ -71,6 +74,13 @@
 
 ![image](https://user-images.githubusercontent.com/38801556/114996273-3fc28c00-9ed1-11eb-8158-f62b29526e3e.png)
 ![image](https://user-images.githubusercontent.com/38801556/114996330-4ea93e80-9ed1-11eb-973a-6a81fc6b9343.png)
+
+
+2021-4-22 0.0.8-pack-more 更新日志:  
+<ul>
+    <li>新增多模块打包机制，只需根据vite的注入环境变量模式，编写好相关打包dev和build命令，即可创建模块使用。</li>
+    <li>更新element plus 内部组件默认为英语的问题，以及相关内部多语言切换的问题，已提交<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a>等待官方调整适配，如果其他element 切换问题请查看<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a></li>
+</ul>
 
 
 ## 运行
