@@ -39,6 +39,11 @@
 
 基于vue3 + vite + ts  开发   
 
+# 国内下载渠道
+
+<a href="https://gitee.com/wushijiang13/vue3-vite-cli">码云</a>  
+
+
 ## 分支目录
     
 <ul>
