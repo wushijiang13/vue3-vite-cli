@@ -6,5 +6,3 @@ locale(lang);
 [ElButton,ElPagination].forEach(component => {
     app.component(component.name, component)
 })
-
-
