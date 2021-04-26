@@ -3,8 +3,8 @@
   "version": "0.0.4",
   "scripts": {
     "dev": "vite",
-    "dev:module1": "vite --mode module1",
-    "build:module1": " vue-tsc --noEmit --skipLibCheck && vite build --mode module1",
+    "dev:module1": "cross-env VITE_ROOT_URL=./src/module/module1 VITE_MODULE_NAME=module1 vite",
+    "build:module1": "vue-tsc --noEmit --skipLibCheck && cross-env VITE_ROOT_URL=./src/module/module1 VITE_MODULE_NAME=module1 vite build",
     "dev-prod": "vite --mode production",
     "build": "vue-tsc --noEmit --skipLibCheck && vite build",
     "serve": "vite preview"
@@ -13,6 +13,7 @@
     "@types/node": "^14.14.41",
     "ant-design-vue": "^2.1.2",
     "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
     "element-plus": "^1.0.2-beta.40",
     "esbuild": "^0.11.12",
     "sass": "^1.32.8",

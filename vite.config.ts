@@ -1,14 +1,11 @@
 import vue from '@vitejs/plugin-vue'
 import styleImport from 'vite-plugin-style-import'
-//获取 vite 中的import的环境变量
-import { loadEnv } from 'vite'
 
 // https://vitejs.dev/config/
-export default ({mode}) => {
+export default () => {
     //由于vite 中不支持在配置文件中获取import.meta的环境变量的注入，所以使用此种方法提前获取。详情查看
-    const VITE_ROOT_URL=loadEnv(mode,process.cwd()).VITE_ROOT_URL;
-    if (mode != undefined) {
-        return {
+    const VITE_ROOT_URL=process.env.VITE_ROOT_URL;
+    return {
             root:VITE_ROOT_URL != undefined ? VITE_ROOT_URL : '', //根据注入的环境变量判断项目加载启动url
             plugins: [
                 vue(),
@@ -55,6 +52,5 @@ export default ({mode}) => {
             ],
             base:"./",
         }
-    }
 }
 

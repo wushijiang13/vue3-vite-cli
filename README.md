@@ -33,6 +33,9 @@
     <a href="https://github.com/intlify/vue-i18n-next">
         <img src="https://img.shields.io/badge/vueI18n-9.1.6-brightgreen.svg" alt="vue-i18n-next">
     </a>
+    <a href="https://github.com/kentcdodds/cross-env">
+        <img src="https://img.shields.io/badge/cross-env-7.0.3-brightgreen.svg" alt="cross-env">
+    </a>
 </p>
 
 # Vue3 + Vite + Typescript
@@ -70,7 +73,13 @@
      </li>
       <li>
       <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.8-pack-more">0.0.8-pack-more</a> > 项目结构修改为多模块打包机制。
+       <p style="color: red;">特别说明：0.0.8-pack-more 此分支是按照vite官方的创建.env.xx文件的方式注入的环境变量，考虑到后续模块过多，需创建过于多的env文件。项目改为 cross-env 注入环境变量的方式区分。  
+       <br/>（此分支仅供学习，不推荐使用此方法注入！并且模板后续不根据此方法注入环境变量！！！）</p>  
       </li>
+       <li>
+       <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.9-cross-env">0.0.9-cross-env</a> > 项目结构修改为cross-env多模块打包机制。
+       <p>项目后续会根据corss-env引入环境变量特此注明，为了项目的简洁性以及命令注入的方便后续更新都采用此方法注入环境变量！</p>
+     </li>
 </ul> 
 
 详情可切换分支查看，所有分支都通过了编译测试。
