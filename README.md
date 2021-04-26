@@ -34,7 +34,7 @@
         <img src="https://img.shields.io/badge/vueI18n-9.1.6-brightgreen.svg" alt="vue-i18n-next">
     </a>
     <a href="https://github.com/kentcdodds/cross-env">
-        <img src="https://img.shields.io/badge/cross-env-7.0.3-brightgreen.svg" alt="cross-env">
+        <img src="https://img.shields.io/badge/crossEnv-7.0.3-brightgreen.svg" alt="cross-env">
     </a>
 </p>
 
