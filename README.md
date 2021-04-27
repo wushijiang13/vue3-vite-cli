@@ -84,6 +84,9 @@
        <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.9-cross-env">0.0.9-cross-env</a> > 项目结构修改为cross-env多模块打包机制。
        <p>项目后续会根据corss-env引入环境变量特此注明，为了项目的简洁性以及命令注入的方便后续更新都采用此方法注入环境变量！</p>
      </li>
+     <li>
+     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.10-beta">0.0.10-beta</a> > 项目结构修改，并且支持npm下载项目,并选择模板。
+     </li>
 </ul> 
 
 详情可切换分支查看，所有分支都通过了编译测试。
