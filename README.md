@@ -119,3 +119,7 @@
  create-cli
 ```
 
+## License
+
+MIT
+
