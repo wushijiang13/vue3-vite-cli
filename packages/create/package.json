@@ -1,22 +1,19 @@
 {
-  "name": "vite-vue3-cli",
+  "name": "vue3-create",
   "version": "0.0.10-beta",
+  "license": "MIT",
   "author": "Mr.wu",
   "bin": {
-    "create-cli": "./bin/npmrc.js"
+    "create-cli": "node index.js"
   },
   "dependencies": {
     "@types/node": "^14.14.41",
-    "ant-design-vue": "^2.1.2",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
-    "element-plus": "^1.0.2-beta.40",
     "enquirer": "^2.3.6",
     "esbuild": "^0.11.12",
     "sass": "^1.32.8",
-    "vant": "^3.0.13",
     "vue": "^3.0.5",
-    "vue-i18n": "^9.1.6",
     "vue-router": "^4.0.5",
     "vuex": "^4.0.0"
   },

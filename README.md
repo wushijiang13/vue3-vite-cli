@@ -8,6 +8,9 @@
 </p>
 
 <p align="center">
+    <a href="https://www.npmjs.com/package/vite-vue3-cli">
+        <img src="https://img.shields.io/badge/npm-0.0.10-brightgreen.svg" alt="npm">
+    </a>
     <a href="https://github.com/vuejs/vue-next">
         <img src="https://img.shields.io/badge/vue3-3.0.5-brightgreen.svg" alt="vue">
     </a>
@@ -36,6 +39,7 @@
     <a href="https://github.com/kentcdodds/cross-env">
         <img src="https://img.shields.io/badge/crossEnv-7.0.3-brightgreen.svg" alt="cross-env">
     </a>
+    
 </p>
 
 # Vue3 + Vite + Typescript
@@ -90,25 +94,25 @@
 ![image](https://user-images.githubusercontent.com/38801556/115701661-98df6380-a39a-11eb-8b23-891e38510b68.png)
 ![image](https://user-images.githubusercontent.com/38801556/115701833-c9bf9880-a39a-11eb-8dba-ee479cab71aa.png)
 
-
-
-
 2021-4-22 0.0.8-pack-more 更新日志:  
 <ul>
     <li>新增多模块打包机制，只需根据vite的注入环境变量模式，编写好相关打包dev和build命令，即可创建模块使用。</li>
     <li>更新element plus 内部组件默认为英语的问题，以及相关内部多语言切换的问题，已提交<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a>等待官方调整适配，如果其他element 切换问题请查看<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a></li>
 </ul>
+2021-4-27 0.0.10-beta 更新日志:
+<ul>
+    <li>修改目录层级并支持npm安装项目</li>
+    <li>增加第一个模板template-vue3-ts-initial(最初的模板)</li>
+</ul>
 
 
-## 运行
+## 快速使用
 
 ```
- # 进入项目目录
- cd vite-vue3-cli 
- 
  # 下载依赖
- npm i
-
- # 运行项目
- npm run dev
+ npm i vite-vue3-cli -g
+ 
+ # 创建项目
+ create-cli
 ```
+
