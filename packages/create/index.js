@@ -3,10 +3,11 @@
 const { prompt } = require('enquirer');
 const fs =require('fs');
 const path = require('path');
+const execa =require('execa');
 const cwd=process.cwd();
 
 
-async function init() {
+async function  init() {
 
     const renameFiles = {
         _gitignore: '.gitignore'
@@ -19,8 +20,6 @@ async function init() {
         initial:"vue3-vite-cli",
     })
     const projectName=await checkProjectName(projectname.projectName)
-
-
 
     let selectTemplate =  await prompt({
         type: 'select',
@@ -49,6 +48,10 @@ async function init() {
     }
 
     copy(path.join(templateDir), root);
+
+    //记得把这个里的依赖下载加上 还没成功
+    await execa('cd', [projectName]);
+    await execa('npm', ['install']);
 
     const pkg = require(path.join(templateDir, `package.json`))
 
