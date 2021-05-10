@@ -49,9 +49,9 @@ async function  init() {
 
     copy(path.join(templateDir), root);
 
-    //记得把这个里的依赖下载加上 还没成功
-    await execa('cd', [projectName]);
-    await execa('npm', ['install']);
+    //此操作将后续提上日程。
+   /* await execa('cd', [projectName]);
+    await execa('npm', ['install']);*/
 
     const pkg = require(path.join(templateDir, `package.json`))
 

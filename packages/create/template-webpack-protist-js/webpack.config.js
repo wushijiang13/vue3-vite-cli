@@ -5,21 +5,20 @@ const webpack=require('webpack');
 module.exports={
     mode: "development",
     entry:{
-        index:"./page/index/index.js",
+        index:"./page/index/static/js/index.js",
     },
     devServer:{
-        contentBase:"./dist",
+        watchContentBase: true,
+        contentBase:"./page",
         host: "0.0.0.0",
         hot:true,
         port:8081,
-        hotOnly: true,//启用热模块构建，以防万一
-        lazy: false,
-        overlay: true,
+        inline: true,//设置外部引入
     },
     plugins:[
         new HtmlWebpackPlugin({
             minify:true,
-            filename:"index.html",
+            filename:"index.html" ,
             template:"./page/index/index.html",
             hash:true,
         }),
@@ -29,14 +28,16 @@ module.exports={
       rules:[
           {
               test:/\.js$/,
-              use:["babel-loader"],
+              use:['babel-loader'],
           },
           {
               test: /\.css$/,
-              use: [ 'style-loader', 'css-loader' ]
+              use: [
+                  { loader :'style-loader'},
+                  { loader :'css-loader'}]
           },
           {
-              test:/\.html$/i,
+              test:/\.html$/,
               use:['html-loader']
           }
       ],
