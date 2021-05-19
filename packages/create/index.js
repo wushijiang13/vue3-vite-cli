@@ -28,6 +28,7 @@ async function  init() {
         initial:"vue3-vite-cli",
         choices: [
             { name: 'vue3-ts-initial'},
+            { name: 'webpack-protist-js'},
         ]
     });
     const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
