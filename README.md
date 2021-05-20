@@ -88,7 +88,7 @@
      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.10-beta">0.0.10-beta</a> > 项目结构修改，并且支持npm下载项目,并选择模板。
      </li>
      <li>
-     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.11-webpack-protist-js-beta">0.0.11-webpack-protist-js-beta</a> > 项目加入新的模板项目 新加入的为原生html+js+css+webpack组成的页面
+     <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.11-beta-webpack-protist-js">0.0.11-beta-webpack-protist-js</a> > 项目加入新的模板项目 新加入的为原生html+js+css+webpack组成的页面
      <br/>热更新原生页面！项目支持多页面热更新，方便原生小页面的打包到环境配置的问题。🎉🎉🎉
      </li>
 </ul> 
@@ -111,7 +111,7 @@
     <li>修改目录层级并支持npm安装项目</li>
     <li>增加第一个模板template-vue3-ts-initial(最初的模板)</li>
 </ul>
-2021-5-19 0.0.11-webpack-protist-js-beta 更新日志:
+2021-5-19 0.0.11-beta-webpack-protist-js 更新日志:
 <ul>
     <li>增加第二个模板template-webpack-protist-js 由html+css+js+webpack支持多页面热更新，方便原生页面保护混淆等</li>
     <li>create-cli指令中加入template-webpack-protist-js支持</li>
