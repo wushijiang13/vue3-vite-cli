@@ -38,6 +38,10 @@ module.exports={
           {
               test:/\.html$/,
               use:['html-loader']
+          },
+          {
+              test:/\.(png|jpg|gif|ttf|svg|webp)$/, //如有需要后续自己加
+              use:['url-loader']
           }
       ],
     },
