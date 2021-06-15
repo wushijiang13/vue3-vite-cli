@@ -35,11 +35,11 @@ module.exports = {
                     text: '模板内部结构解析',
                     children: [
                         {
-                            text: 'template-vue3-ts-initial.html',
+                            text: 'vue3-ts-initial',
                             link: '/template/template-vue3-ts-initial.html'
                         },
                         {
-                            text: 'template-webpack-protist-js.html',
+                            text: 'webpack-protist-js',
                             link: '/template/template-webpack-protist-js.html'
                         }
                     ]
@@ -48,11 +48,11 @@ module.exports = {
                     text: '相关文档',
                     children: [
                         {
-                            text: 'vue文档',
+                            text: 'Vue 相关文档',
                             link: '/documentation/vue.html'
                         },
                         {
-                            text: 'webpack文档',
+                            text: 'Webpack 相关文档',
                             link: '/documentation/webpack.html'
                         }
                     ]
