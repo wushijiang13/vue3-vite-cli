@@ -15,7 +15,7 @@
    
    想要尝试 Vite 和 Vue3 以及 Ts 小伙伴，此乃入门项目最简易最容易上手的学习并使用的项目模板！ 
    
-   [我要使用vue3-ts-initial](/template/template-vue3-ts-initial.html)
+   [我要使用vue3-ts-initial](http://wushijiang.cn/vue3-vite-cli/template/template-vue3-ts-initial.html)
 
 ### webpack-protist-js
 
@@ -25,5 +25,5 @@
      
    实乃是想练手原生css骚操作、js奇淫巧技、以原生开发为主的最好伙伴！
     
-   [我要使用webpack-protist-js](/template/template-webpack-protist-js.html)
+   [我要使用webpack-protist-js](http://wushijiang.cn/vue3-vite-cli/template/template-webpack-protist-js.html)
 
