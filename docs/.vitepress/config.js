@@ -1,5 +1,5 @@
 module.exports = {
-    base:'/vue3-vite-cli/',
+    // base:'/vue3-vite-cli/',
     title: 'Vue3-Vite-Cli 中文文档',
     description: '基于vite为基础搭建的风格脚手架,以便于更高效的解决业务需求！',
     lang: 'zh-CN',
@@ -22,7 +22,7 @@ module.exports = {
                     text: '入门',
                     children: [
                         {
-                            text: '什么是 Vue3-Vite-Cli ？',
+                            text: '简介',
                             link: '/getting/why.html'
                         },
                         {
