@@ -94,13 +94,13 @@
      <br/>热更新原生页面！项目支持多页面热更新，方便原生小页面的打包到环境配置的问题。
      </li>
       <li>
-      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.12-stable">0.0.12-stable</a> > 
+      <a href="https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.12-stables">0.0.12-stable</a> > 
        更新模板template-webpack-protist-js 优化打包后目录层级和运行时不一致问题，加入文件名加密，文件混淆压缩。 <br/>
        修复模板template-webpack-protist-js 运行时目录层级无法找到对应的文件问题。 <br/>
        create-cli指令中加入 execa 自动检查模板环境下载对应依赖。 <br/>
        docs 官方文档中对模板修改和webpack优化项加入说明！ <br/>
        移除了下载完毕后的小狗头。<br/>
-       0.0.12-stable 正式版 🎉🎉🎉 上线！<br/>
+       0.0.12-stables 正式版 🎉🎉🎉 上线！<br/>
       </li>
      
 </ul> 
@@ -128,14 +128,14 @@
     <li>增加第二个模板template-webpack-protist-js 由html+css+js+webpack支持多页面热更新，方便原生页面保护混淆等</li>
     <li>create-cli指令中加入template-webpack-protist-js支持</li>
 </ul>
-2021-7-12 0.0.12-stable 更新日志:
+2021-7-12 0.0.12-stables 更新日志:
 <ul>
     <li>更新模板template-webpack-protist-js 优化打包后目录层级和运行时不一致问题，加入文件名加密，文件混淆压缩</li>
     <li>修复模板template-webpack-protist-js 运行时目录层级无法找到对应的文件问题。</li>
     <li>create-cli指令中加入 execa 自动检查模板环境下载对应依赖</li>
     <li>docs 官方文档中对模板修改和webpack优化项加入说明！</li>
     <li>移除了下载完毕后的小狗头😭</li>
-    <li>0.0.12-stable 正式版 🎉🎉🎉 上线！</li>
+    <li>0.0.12-stables 正式版 🎉🎉🎉 上线！</li>
 </ul>
 
 

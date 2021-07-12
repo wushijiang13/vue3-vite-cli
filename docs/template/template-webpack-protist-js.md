@@ -12,7 +12,7 @@
   
   [webpack-protist-js](https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.11-beta-webpack-protist-js) :`创建webpack-protist-js 并支持 hot 热更新`  
   
-  [0.0.12-stable](https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.12-stable) :`更新模板template-webpack-protist-js 优化打包后目录层级和运行时不一致问题，加入文件名加密，文件混淆压缩`
+  [0.0.12-stables](https://github.com/wushijiang13/vue3-vite-cli/tree/0.0.12-stables) :`更新模板template-webpack-protist-js 优化打包后目录层级和运行时不一致问题，加入文件名加密，文件混淆压缩`
     
    ### 项目层级
    ::: tip 提示
