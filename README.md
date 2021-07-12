@@ -42,9 +42,11 @@
     
 </p>
 
-# Vue3 + Vite + Typescript
+# Based on vite style scaffolding, provide a variety of templates to more efficiently solve business needs!  
 
-基于vue3 + vite + ts  开发   
+<a href="http://wushijiang.cn/vue3-vite-cli/">中文文档</a>  
+ 
+![image](https://user-images.githubusercontent.com/38801556/125270634-6eb79500-e33c-11eb-89d1-597f8c21f53c.png)
 
 ## 国内下载传送门🎉
 
