@@ -1,5 +1,10 @@
 .test{
-    background-color: #a41446;
+    background-color: #e9db68;
+    color: #fff;
+}
+.test-img{
+    vertical-align: top;
+    margin-top: 20px;
 }
 .bg-img{
     background: url("../img/test.webp") no-repeat;

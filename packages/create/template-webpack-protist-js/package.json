@@ -1,6 +1,6 @@
 {
   "name": "webpack-protist-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "webpack builds native js projects",
   "main": "index.js",
   "scripts": {

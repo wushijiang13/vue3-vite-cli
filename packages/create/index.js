@@ -4,7 +4,7 @@ const { prompt } = require('enquirer');
 const fs =require('fs');
 const path = require('path');
 const cwd=process.cwd();
-
+const execa=require('execa');
 
 async function  init() {
 
@@ -32,7 +32,7 @@ async function  init() {
     });
     const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
     let root =path.join(cwd,projectName);
-    console.log(`\nScaffolding project in ${projectName}.../创建${projectName}项目中...`)
+    console.log(`\n  Scaffolding project in ${projectName}.../创建${projectName}项目中...`)
 
     emptyDir(root);
 
@@ -55,50 +55,28 @@ async function  init() {
 
     const pkgManager = /yarn/.test(process.env.npm_execpath) ? 'yarn' : 'npm'
 
-    console.log(`\nDone. Now run/完毕。现在运行:\n`)
-    if (root !== cwd) {
-        console.log(`  cd ${path.relative(cwd, root)}`)
-    }
-    console.log(`  ${pkgManager === 'yarn' ? `yarn` : `npm install`}`)
-    console.log(`  ${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}`)
-    console.log()
+    console.log(`\nDone. Now run/完毕。现在运行:`)
 
-       console.log(`         .,:,,,                                        .::,,,::.`)
-       console.log(`       .::::,,;;,                                  .,;;:,,....:i:`)
-       console.log(`       :i,.::::,;i:.      ....,,:::::::::,....   .;i:,.  ......;i.`)
-       console.log(`       :;..:::;::::i;,,:::;:,,,,,,,,,,..,.,,:::iri:. .,:irsr:,.;i.`)
-       console.log(`       ;;..,::::;;;;ri,,,.                    ..,,:;s1s1ssrr;,.;r,`)
-       console.log(`       :;. ,::;ii;:,     . ...................     .;iirri;;;,,;i,`)
-       console.log(`       ,i. .;ri:.   ... ............................  .,,:;:,,,;i:`)
-       console.log(`       :s,.;r:... ....................................... .::;::s;`)
-       console.log(`       ,1r::. .............,,,.,,:,,........................,;iir;`)
-       console.log(`       ,s;...........     ..::.,;:,,.          ...............,;1s`)
-       console.log(`      :i,..,.              .,:,,::,.          .......... .......;1,`)
-       console.log(`     ir,....:rrssr;:,       ,,.,::.     .r5S9989398G95hr;. ....,.:s,`)
-       console.log(`    ;r,..,s9855513XHAG3i   .,,,,,,,.  ,S931,.,,.;s;s&BHHA8s.,..,..:r:`)
-       console.log(`   :r;..rGGh,  :SAG;;G@BS:.,,,,,,,,,.r83:      hHH1sXMBHHHM3..,,,,.ir.`)
-       console.log(`  ,si,.1GS,   sBMAAX&MBMB5,,,,,,:,,.:&8       3@HXHBMBHBBH#X,.,,,,,,rr`)
-       console.log(`  ;1:,,SH:   .A@&&B#&8H#BS,,,,,,,,,.,5XS,     3@MHABM&59M#As..,,,,:,is,`)
-       console.log(` .rr,,,;9&1   hBHHBB&8AMGr,,,,,,,,,,,:h&&9s;   r9&BMHBHMB9:  . .,,,,;ri.`)
-       console.log(` :1:....:5&XSi;r8BMBHHA9r:,......,,,,:ii19GG88899XHHH&GSr.      ...,:rs.`)
-       console.log(` ;s.     .:sS8G8GG889hi.        ....,,:;:,.:irssrriii:,.        ...,,i1,`)
-       console.log(` ;1,         ..,....,,isssi;,        .,,.                      ....,.i1,`)
-       console.log(` ;h:               i9HHBMBBHAX9:         .                     ...,,,rs,`)
-       console.log(` ,1i..            :A#MBBBBMHB##s                             ....,,,;si.`)
-       console.log(` .r1,..        ,..;3BMBBBHBB#Bh.     ..                    ....,,,,,i1;`)
-       console.log(`  :h;..       .,..;,1XBMMMMBXs,.,, .. :: ,.               ....,,,,,,ss.`)
-       console.log(`   ih: ..    .;;;, ;;:s58A3i,..    ,. ,.:,,.             ...,,,,,:,s1,`)
-       console.log(`   .s1,....   .,;sh,  ,iSAXs;.    ,.  ,,.i85            ...,,,,,,:i1;`)
-       console.log(`    .rh: ...     rXG9XBBM#M#MHAX3hss13&&HHXr         .....,,,,,,,ih;`)
-       console.log(`     .s5: .....    i598X&&A&AAAAAA&XG851r:       ........,,,,:,,sh;`)
-       console.log(`     . ihr, ...  .         ..                    ........,,,,,;11:.`)
-       console.log(`        ,s1i. ...  ..,,,..,,,.,,.,,.,..       ........,,.,,.;s5i.`)
-       console.log(`         .:s1r,......................       ..............;shs,`)
-       console.log(`         . .:shr:.  ....                 ..............,ishs.`)
-       console.log(`             .,issr;,... ...........................,is1s;.`)
-       console.log(`                .,is1si;:,....................,:;ir1sr;,`)
-       console.log(`                   ..:isssssrrii;::::::;;iirsssssr;:..`)
-       console.log(`                        .,::iiirsssssssssrri;;:.`)
+    console.log(`\nDownloading dependencies.../正在下载依赖...`)
+
+    let downShell=pkgManager === 'yarn' ? '' : 'install';
+    console.log(`\nrunning/正在运行:${pkgManager+" "+downShell}` );
+    const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:['inherit']});
+    console.log(downResult.stdout);
+    if(downResult.failed){
+        console.error('\nFailed to download dependencies/下载依赖失败 ');
+        console.log(`  ${pkgManager === 'yarn' ? `yarn` : `npm install`}`)
+    }else{
+        console.log(`Depend on the download is complete!🥳/依赖下载完成!🥳`)
+    }
+
+    if (root !== cwd) {
+        console.log(`\ncd ${path.relative(cwd, root)}`)
+    }
+
+    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}`)
+
+    console.log(`\nFrom Wu/来自吴~`)
 
 }
 
