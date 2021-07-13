@@ -46,7 +46,8 @@
 
 <a href="http://wushijiang.cn/vue3-vite-cli/">中文文档</a>  
  
-![image](https://user-images.githubusercontent.com/38801556/125270634-6eb79500-e33c-11eb-89d1-597f8c21f53c.png)
+![image](https://user-images.githubusercontent.com/38801556/125270634-6eb79500-e33c-11eb-89d1-597f8c21f53c.png)  
+
 
 ## 国内下载传送门🎉
 
@@ -146,7 +147,8 @@
  npm i vite-vue3-cli -g
  
  # 创建项目
- create-cli
+ create-cli 
+ //请注意 项目如果有重名将会覆盖原项目！！！ 所以请务必检查 不要重名，后续会加入询问。
 ```
 
 ## License
