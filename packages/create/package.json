@@ -1,6 +1,6 @@
 {
   "name": "vue3-create",
-  "version": "0.0.12-stables",
+  "version": "0.0.12-beta",
   "license": "MIT",
   "author": "Mr.wu",
   "bin": {
@@ -8,10 +8,8 @@
   },
   "dependencies": {
     "@types/node": "^14.14.41",
-    "axios": "^0.21.1",
     "cross-env": "^7.0.3",
     "enquirer": "^2.3.6",
-    "esbuild": "^0.11.12",
     "execa": "^5.1.1",
     "sass": "^1.32.8",
     "vue": "^3.0.5",
