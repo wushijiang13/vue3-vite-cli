@@ -8,10 +8,13 @@
   },
   "dependencies": {
     "@types/node": "^14.14.41",
+    "colors": "^1.4.0",
     "cross-env": "^7.0.3",
     "enquirer": "^2.3.6",
     "execa": "^5.1.1",
+    "progress": "^2.0.3",
     "sass": "^1.32.8",
+    "single-line-log": "^1.1.2",
     "vue": "^3.0.5",
     "vue-router": "^4.0.5",
     "vuex": "^4.0.0"

@@ -5,8 +5,15 @@ const fs =require('fs');
 const path = require('path');
 const cwd=process.cwd();
 const execa=require('execa');
+const progressBar = require('progress');
+const log=require('single-line-log').stdout;
+require('colors');
 
-async function  init() {
+let copyCount=0; //需要拷贝的文件数量
+let copySchedule=0;//拷贝进度
+let bar ;//进度条
+
+async function init() {
 
     const renameFiles = {
         _gitignore: '.gitignore'
@@ -32,7 +39,7 @@ async function  init() {
     });
     const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
     let root =path.join(cwd,projectName);
-    console.log(`\n  Scaffolding project in ${projectName}.../创建${projectName}项目中...`)
+    console.log(`\nScaffolding project in ${projectName}.../创建${projectName}项目中...`)
 
     emptyDir(root);
 
@@ -46,6 +53,14 @@ async function  init() {
             copy(path.join(templateDir, file), targetPath)
         }
     }
+
+    calculateCount(path.join(templateDir));
+
+    bar =new progressBar('Current creation progress/当前创建进度: :bar :percent :rate/s :etas', { total: copyCount ,
+        complete: "█".green,
+        incomplete:"░",
+        width: 30,
+    });
 
     copy(path.join(templateDir), root);
 
@@ -61,31 +76,32 @@ async function  init() {
 
     let downShell=pkgManager === 'yarn' ? '' : 'install';
     console.log(`\nrunning/正在运行:${pkgManager+" "+downShell}` );
-    const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:['inherit']});
-    console.log(downResult.stdout);
+    const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:'inherit'});
     if(downResult.failed){
         console.error('\nFailed to download dependencies/下载依赖失败 ');
-        console.log(`  ${pkgManager === 'yarn' ? `yarn` : `npm install`}`)
+        console.log(`${pkgManager === 'yarn' ? `yarn` : `npm install`}\n`)
     }else{
-        console.log(`Depend on the download is complete!🥳/依赖下载完成!🥳`)
+        console.log(`Depend on the download is complete!/依赖下载完成!🥳`)
     }
 
     if (root !== cwd) {
-        console.log(`\ncd ${path.relative(cwd, root)}`)
+        console.log(`\ncd ${path.relative(cwd, root)}`.green)
     }
-
-    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}`)
-
-    console.log(`\nFrom Wu/来自吴~`)
-
+    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}\n`.green)
 }
 
-function copy(src, dest) {
+async function copy(src, dest) {
     const stat = fs.statSync(src)
-    if (stat.isDirectory()) {
-        copyDir(src, dest)
+    if (stat.isDirectory()) { //是否是一个目录 而不是文件。
+      copyDir(src, dest)
     } else {
-        fs.copyFileSync(src, dest)
+      await fs.copyFileSync(src, dest)
+    }
+    copySchedule++;
+    if (bar.complete) {
+        log('\nCreated/创建完成'.green);
+    }else{
+        bar.tick(copySchedule/(copyCount/100));
     }
 }
 
@@ -122,6 +138,26 @@ function copyDir(srcDir, destDir) {
         const srcFile = path.resolve(srcDir, file)
         const destFile = path.resolve(destDir, file)
         copy(srcFile, destFile)
+    }
+}
+
+/**
+ * 计算当前模板文件数量
+ */
+function calculateCount(srcDir){
+    if (fs.statSync(srcDir).isDirectory()) { //是否是一个目录 而不是文件。
+        dirCount(srcDir)
+    }
+}
+
+/***
+ * 目录内部数量
+ */
+function dirCount(srcDir) {
+    copyCount+=fs.readdirSync(srcDir).length;
+    for (const file of fs.readdirSync(srcDir)) {
+        const srcFile = path.resolve(srcDir, file)
+        calculateCount(srcFile)
     }
 }
 
