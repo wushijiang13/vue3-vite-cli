@@ -56,13 +56,13 @@ async function init() {
 
     calculateCount(path.join(templateDir));
 
-    bar =new progressBar('Current creation progress/当前创建进度: :bar :percent :rate/s :etas', { total: copyCount ,
-        complete: "█".green,
+    bar =new progressBar('Current creation progress/当前创建进度: :bar :percent ', { total: copyCount ,
+        complete: "█",
         incomplete:"░",
         width: 30,
     });
 
-    copy(path.join(templateDir), root);
+    await copy(path.join(templateDir), root);
 
     const pkg = require(path.join(templateDir, `package.json`))
 
@@ -95,11 +95,11 @@ async function copy(src, dest) {
     if (stat.isDirectory()) { //是否是一个目录 而不是文件。
       copyDir(src, dest)
     } else {
+      copySchedule++;
       await fs.copyFileSync(src, dest)
     }
-    copySchedule++;
     if (bar.complete) {
-        log('\nCreated/创建完成'.green);
+        log('\nCreated/创建完成\n'.green);
     }else{
         bar.tick(copySchedule/(copyCount/100));
     }
