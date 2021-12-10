@@ -14,7 +14,7 @@ let copySchedule=0;//拷贝进度
 let bar ;//进度条
 
 async function init() {
-
+    try{
     const renameFiles = {
         _gitignore: '.gitignore'
     }
@@ -26,7 +26,6 @@ async function init() {
         initial:"vue3-vite-cli",
     })
     const projectName=await checkProjectName(projectname.projectName)
-
     let selectTemplate =  await prompt({
         type: 'select',
         name: 'ProjectTemplate',
@@ -88,6 +87,9 @@ async function init() {
         console.log(`\ncd ${path.relative(cwd, root)}`.green)
     }
     console.log(`${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}\n`.green)
+    }catch (e) {
+        
+    }
 }
 
 async function copy(src, dest) {
@@ -108,6 +110,22 @@ async function copy(src, dest) {
 async function checkProjectName(projectName) {
     const packageNameRegExp = /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/
     if (packageNameRegExp.test(projectName)) {
+        console.log(fs.existsSync(path.join(__dirname, projectName)));
+        if(fs.existsSync(path.join(__dirname, projectName))){
+            let coverQuerySelect =  await prompt({
+                type: 'select',
+                name: 'coverQuery',
+                message: 'The current file name already exists, do you want to overwrite it?/当前文件名已存在，是否覆盖？',
+                initial:"yes/确认",
+                choices: [
+                    { name: 'yes'},
+                    { name: 'no'},
+                ]
+            });
+            if (coverQuerySelect.coverQuery == 'no') {
+                prompt.stop();
+            }
+        }
         return projectName
     } else {
         const suggestedPackageName = projectName
