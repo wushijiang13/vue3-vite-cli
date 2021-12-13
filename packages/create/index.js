@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-
 const { prompt } = require('enquirer');
 const fs =require('fs');
 const path = require('path');
 const cwd=process.cwd();
 const execa=require('execa');
-const progressBar = require('progress');
-const log=require('single-line-log').stdout;
+let progressBar = require('progress');
+let log=require('single-line-log').stdout;
 require('colors');
 
 let copyCount=0; //需要拷贝的文件数量
@@ -110,8 +109,8 @@ async function copy(src, dest) {
 async function checkProjectName(projectName) {
     const packageNameRegExp = /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/
     if (packageNameRegExp.test(projectName)) {
-        console.log(fs.existsSync(path.join(__dirname, projectName)));
-        if(fs.existsSync(path.join(__dirname, projectName))){
+        console.log(path.join(cwd, projectName));
+        if(fs.existsSync(path.join(cwd,projectName))){
             let coverQuerySelect =  await prompt({
                 type: 'select',
                 name: 'coverQuery',

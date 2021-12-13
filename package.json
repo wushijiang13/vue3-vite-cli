@@ -1,6 +1,6 @@
 {
   "name": "vite-vue3-cli",
-  "version": "0.0.13-bate",
+  "version": "0.1.19-bate",
   "author": "Mr.wu",
   "bin": {
     "create-cli": "./bin/npmrc.js"
@@ -14,7 +14,10 @@
     "@types/node": "^14.14.41",
     "enquirer": "^2.3.6",
     "execa": "^5.1.1",
-    "vitepress": "^0.14.1"
+    "vitepress": "^0.14.1",
+    "colors": "^1.4.0",
+    "progress": "^2.0.3",
+    "single-line-log": "^1.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.1",
