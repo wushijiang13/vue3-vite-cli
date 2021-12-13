@@ -150,12 +150,14 @@
  # 下载依赖
  npm i vite-vue3-cli -g
 
+ # 更新版本
+ npm update vite-vue3-cli -g
+
  # mac 确保使用管理员权限下载
  sudo npm i -g vite-vue3-cli --unsafe-perm=true 
  
  # 创建项目
  create-cli 
- //请注意 项目如果有重名将会覆盖原项目！！！ 所以请务必检查 不要重名，后续会加入询问。
 ```
 
 ## License
