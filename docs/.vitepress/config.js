@@ -3,16 +3,19 @@ module.exports = {
     title: 'Vue3-Vite-Cli 中文文档',
     description: '基于vite为基础搭建的风格脚手架,提供多种模板以便于更高效的解决业务需求！',
     lang: 'zh-CN',
-    docsDir: 'docs',
-    editLink: true,
-    editLinkText: '欢迎帮助我们改善页面!',
     head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo.jpeg' }]],
     themeConfig:{
+        repo: 'wushijiang13/vue3-vite-cli',
+        repoLabel:'GitHub',
+        docsDir: 'docs',
+        docsBranch: 'master',
+        editLinks: true,
+        editLinkText: '欢迎帮助我们改善页面!',
+        lastUpdated: '最近更新时间',
         nav: [
             { text: '入门', link: '/getting/why.html' },
             { text: '模板', link: '/template/template-vue3-ts-initial.html' },
             { text: '相关文档', link: '/documentation/vue.html' },
-            { text: 'GitHub', link: 'https://github.com/wushijiang13/vue3-vite-cli' },
             { text: '码云', link: 'https://gitee.com/wushijiang13/vue3-vite-cli' },
         ],
         sidebar: {

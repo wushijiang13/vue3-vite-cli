@@ -41,17 +41,6 @@ async function init() {
 
     emptyDir(root);
 
-    const write = (file, content) => {
-        const targetPath = renameFiles[file]
-            ? path.join(root, renameFiles[file])
-            : path.join(root, file)
-        if (content) {
-            fs.writeFileSync(targetPath, content)
-        } else {
-            copy(path.join(templateDir, file), targetPath)
-        }
-    }
-
     calculateCount(path.join(templateDir));
 
     bar =new progressBar('Current creation progress/当前创建进度: :bar :percent ', { total: copyCount ,
