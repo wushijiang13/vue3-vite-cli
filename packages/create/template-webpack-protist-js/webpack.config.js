@@ -4,9 +4,13 @@ const HtmlWebpackPlugin=require('html-webpack-plugin');
 //https://www.npmjs.com/package/mini-css-extract-plugin  用于生成新的css 文件
 const MiniCssExtractPlugin=require('mini-css-extract-plugin')
 // https://github.com/webpack-contrib/css-minimizer-webpack-plugin 用于压缩css文件
-const CssMinimizerPlugin=require('css-minimizer-webpack-plugin')
+const CssMinimizerPlugin=require('css-minimizer-webpack-plugin');
+//
+const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 
 let assesDir='static'
+const port=8888;
+const host="localhost";
 
 module.exports={
     mode: "development",
@@ -17,20 +21,28 @@ module.exports={
         host: "localhost",
         hot:true,
         port:8888,
+        open: true,
+        stats: "errors-only",
         // inline: true,//设置外部引入
     },
+    stats: "errors-only",
     plugins:[
         new HtmlWebpackPlugin({
             minify:true,
             filename:"index.html" ,
             template:"./page/index/index.html",
-            hash:true,
+            hash:true
         }),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
             filename:`${assesDir}/css/[name].[hash:8].css`,
             chunkFilename: `${assesDir}/css/[name].[hash:8].css`,
             linkType: "text/css",
+        }),
+        new FriendlyErrorsWebpackPlugin({
+            compilationSuccessInfo: {
+                messages: [`Your application is running here: http://${host}:${port}`]
+            },
         })
     ],
     module:{
@@ -45,7 +57,6 @@ module.exports={
           {
               test: /\.css$/i,
               use: [MiniCssExtractPlugin.loader,
-                  // { loader :'style-loader'}, 和minicss 冲突
                   { loader :'css-loader'}]
           },
           {
