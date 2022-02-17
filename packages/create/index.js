@@ -33,6 +33,7 @@ async function init() {
         choices: [
             { name: 'vue3-ts-initial'},
             { name: 'webpack-protist-js'},
+            { name: 'node-js-demo'},
         ]
     });
     const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
