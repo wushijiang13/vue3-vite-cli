@@ -1,0 +1,11 @@
+{
+  "name": "template-node-js-demo",
+  "version": "1.0.0",
+  "description": "编写js脚本，运行在node环境",
+  "main": "index.js",
+  "scripts": {
+    "dev":"node js/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
