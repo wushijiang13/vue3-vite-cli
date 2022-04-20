@@ -65,3 +65,10 @@
     <li>  docs 官方文档中对模板修改和webpack优化项加入说明！ </li>
     <li>  移除了下载完毕后的小狗头。 </li>
 </ul>
+
+## 0.0.21 (2022-4-20)
+<ul>
+    <li>  template-node-js-demo、template-vue3-ts-initial、template-webpack-protist-js 更新为pnpm包管理器  </li>
+    <li>  template-webpack-protist-js 加入friendly-errors-webpack-plugin 优化日志错误输出 </li>
+    <li>  template-webpack-protist-js 修改模板初始页面样式 </li>
+</ul>

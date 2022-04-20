@@ -6,7 +6,7 @@
 
 <p align="center">
     <a href="https://www.npmjs.com/package/vite-vue3-cli">
-        <img src="https://img.shields.io/badge/version-0.0.10-brightgreen.svg" alt="npm">
+        <img src="https://img.shields.io/badge/version-0.0.21-brightgreen.svg" alt="npm">
     </a>
 </p>
 
