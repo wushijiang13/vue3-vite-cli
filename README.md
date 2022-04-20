@@ -2,59 +2,24 @@
       <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
                <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
       </a>
-       <a href="https://www.tslang.cn/" target="_blank" rel="noopener noreferrer">
-                 <img width="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" alt="Ts logo">
-               </a>
 </p>
 
 <p align="center">
     <a href="https://www.npmjs.com/package/vite-vue3-cli">
         <img src="https://img.shields.io/badge/npm-0.0.10-brightgreen.svg" alt="npm">
     </a>
-    <a href="https://github.com/vuejs/vue-next">
-        <img src="https://img.shields.io/badge/vue3-3.0.5-brightgreen.svg" alt="vue">
-    </a>
-    <a href="https://github.com/element-plus/element-plus">
-        <img src="https://img.shields.io/badge/elementPlus-1.0.2beta.40-brightgreen.svg" alt="element-plus">
-    </a>
-    <a href="https://github.com/vitejs/vite">
-        <img src="https://img.shields.io/badge/vite-2.2.1-brightgreen.svg" alt="vite">
-    </a>
-    <a href="https://github.com/microsoft/TypeScript">
-        <img src="https://img.shields.io/badge/typescript-4.1.3-brightgreen.svg" alt="typescript">
-    </a>
-    <a href="https://github.com/vueComponent/ant-design-vue">
-        <img src="https://img.shields.io/badge/antDesignVue-2.1.2-brightgreen.svg" alt="ant-design-vue">
-    </a>
-    <a href="https://github.com/youzan/vant">
-        <img src="https://img.shields.io/badge/vant-3.0.13-brightgreen.svg" alt="vant">
-    </a>
-    <br/>
-    <a href="https://github.com/axios/axios">
-        <img src="https://img.shields.io/badge/axios-0.21.1-brightgreen.svg" alt="axios">
-    </a>
-    <a href="https://github.com/intlify/vue-i18n-next">
-        <img src="https://img.shields.io/badge/vueI18n-9.1.6-brightgreen.svg" alt="vue-i18n-next">
-    </a>
-    <a href="https://github.com/kentcdodds/cross-env">
-        <img src="https://img.shields.io/badge/crossEnv-7.0.3-brightgreen.svg" alt="cross-env">
-    </a>
-    
 </p>
 
 # Based on vite style scaffolding, provide a variety of templates to more efficiently solve business needs!  
 
-<a href="https://wushijiang.cn/vue3-vite-cli/">中文文档</a>  
- 
-![image](https://user-images.githubusercontent.com/38801556/125270634-6eb79500-e33c-11eb-89d1-597f8c21f53c.png)  
+## status 
 
+Continually updated...
 
-## 国内下载传送门🎉
+## Documentation
+For details, see <a href="https://wushijiang.cn/vue3-vite-cli/"> documentation </a>  
 
-<a href="https://gitee.com/wushijiang13/vue3-vite-cli">码云</a>  
-
-
-## 分支目录
+## Branch description
     
 <ul>
     <li>
@@ -108,7 +73,7 @@
 
 详情可切换分支查看，所有分支都通过了编译测试。
 
-项目截图：  
+## Screenshot：  
 
 ### vue3-ts-initial
 
@@ -121,38 +86,7 @@
 ![image](https://user-images.githubusercontent.com/38801556/164145946-a802d51b-c537-41a8-8ae6-7b560a19dd9e.png)
 
 
-
-2021-4-22 0.0.8-pack-more 更新日志:  
-<ul>
-    <li>新增多模块打包机制，只需根据vite的注入环境变量模式，编写好相关打包dev和build命令，即可创建模块使用。</li>
-    <li>更新element plus 内部组件默认为英语的问题，以及相关内部多语言切换的问题，已提交<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a>等待官方调整适配，如果其他element 切换问题请查看<a href="https://github.com/element-plus/element-plus/issues/1883">issues</a></li>
-</ul>
-2021-4-27 0.0.10-beta 更新日志:
-<ul>
-    <li>修改目录层级并支持npm安装项目</li>
-    <li>增加第一个模板template-vue3-ts-initial(最初的模板)</li>
-</ul>
-2021-5-19 0.0.11-beta-webpack-protist-js 更新日志:
-<ul>
-    <li>增加第二个模板template-webpack-protist-js 由html+css+js+webpack支持多页面热更新，方便原生页面保护混淆等</li>
-    <li>create-cli指令中加入template-webpack-protist-js支持</li>
-</ul>
-2021-7-12 0.0.13-bate 更新日志:
-<ul>
-    <li>更新模板template-webpack-protist-js 优化打包后目录层级和运行时不一致问题，加入文件名加密，文件混淆压缩</li>
-    <li>修复模板template-webpack-protist-js 运行时目录层级无法找到对应的文件问题。</li>
-    <li>create-cli指令中加入 execa 自动检查模板环境下载对应依赖</li>
-    <li>docs 官方文档中对模板修改和webpack优化项加入说明！</li>
-    <li>移除了下载完毕后的小狗头😭</li>
-    <li>0.0.13-bate 正式版 🎉🎉🎉 上线！</li>
-</ul>
-2021-12-10 0.1.19-bate 更新日志:
-<ul>
-    <li>优化克隆项目指令操作，移除掉了进度条颜色</li>
-</ul>
-
-
-## 快速使用
+## Get Started
 
 ```
  # 下载依赖
@@ -168,7 +102,10 @@
  create-cli 
 ```
 
+## Help
+ 
+ gitee backup 👉 <a href="https://gitee.com/wushijiang13/vue3-vite-cli">码云</a>  
+
 ## License
 
-MIT
-
+<a href="https://github.com/wushijiang13/vue3-vite-cli/blob/master/LICENSE">MIT</a>
