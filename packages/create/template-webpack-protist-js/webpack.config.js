@@ -6,7 +6,7 @@ const MiniCssExtractPlugin=require('mini-css-extract-plugin')
 // https://github.com/webpack-contrib/css-minimizer-webpack-plugin 用于压缩css文件
 const CssMinimizerPlugin=require('css-minimizer-webpack-plugin');
 //
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const FriendlyErrorsWebpackPlugin = require("@soda/friendly-errors-webpack-plugin");
 
 let assesDir='static'
 const port=8888;
