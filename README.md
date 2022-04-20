@@ -1,18 +1,20 @@
 <p align="center">
       <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-               <img width="100" src="https://vitejs.dev/logo.svg" alt="Vite logo">
+               <img width="300" src="https://vitejs.dev/logo.svg" alt="Vite logo">
       </a>
 </p>
 
 <p align="center">
     <a href="https://www.npmjs.com/package/vite-vue3-cli">
-        <img src="https://img.shields.io/badge/npm-0.0.10-brightgreen.svg" alt="npm">
+        <img src="https://img.shields.io/badge/version-0.0.10-brightgreen.svg" alt="npm">
     </a>
 </p>
 
-# Based on vite style scaffolding, provide a variety of templates to more efficiently solve business needs!  
+<h1 align="center">Vue3-Vite-Cli</h1>
+<p align="center">Based on vite style scaffolding</p>
+<p align="center">provide a variety of templates to more efficiently solve business needs!</p>
 
-## status 
+## Status 
 
 Continually updated...
 
@@ -78,8 +80,6 @@ For details, see <a href="https://wushijiang.cn/vue3-vite-cli/"> documentation <
 ### vue3-ts-initial
 
 ![image](https://user-images.githubusercontent.com/38801556/115701761-b01e5100-a39a-11eb-856c-f4f1b02d8c2c.png)
-![image](https://user-images.githubusercontent.com/38801556/115701661-98df6380-a39a-11eb-8b23-891e38510b68.png)
-![image](https://user-images.githubusercontent.com/38801556/115701833-c9bf9880-a39a-11eb-8dba-ee479cab71aa.png)
 
 ### webpack-protist-js
 
