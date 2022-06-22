@@ -41,7 +41,7 @@ For details, see <a href="https://wushijiang.cn/vue3-vite-cli/"> documentation <
 
 ### vue3-ts-initial
 
-![image](https://user-images.githubusercontent.com/38801556/115701761-b01e5100-a39a-11eb-856c-f4f1b02d8c2c.png)
+![image](https://user-images.githubusercontent.com/38801556/174986723-75e514aa-1e4f-45dc-b407-78107fbd353e.png)
 
 ### webpack-protist-js
 
