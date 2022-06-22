@@ -15,6 +15,6 @@ let routers:Array<RouteRecordRaw>=[
 ]
 
 //多模块合成一个项目的引用，如果模块过多的话，可通过循环添加。
-routers =routers.concat(module1_router);
+routers = [...routers, ...module1_router];
 
 export { routers };

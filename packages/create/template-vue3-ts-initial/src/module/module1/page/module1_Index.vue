@@ -1,22 +1,16 @@
 <template>
-    <div>
-        {{content}} 哈哈哈
-    </div>
+  <div>
+    <h1>{{content}}</h1>
+    <el-button @click="goBack">返回</el-button>
+  </div>
 </template>
 
-<script>
+<script setup lang="ts">
     import {ref} from 'vue';
-    export default {
-        name: "module1Index",
-        setup(){
-            let content=ref('这是一个模块的首页');
-            return {
-                content,
-            }
-        }
+    import {useRouter} from 'vue-router';
+    const router = useRouter();
+    const content = ref('这是模块页面');
+    const goBack =  ():void => {
+      router.push('/');
     }
 </script>
-
-<style scoped>
-
-</style>

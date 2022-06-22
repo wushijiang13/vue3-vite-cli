@@ -1,49 +1,33 @@
 <template>
-    <div class="activity">
-
-        <p>Vue3 globalProperties 注入全局的使用</p>
+    <div>
+        <h2># Vue3 globalProperties 注入全局的使用</h2>
          {{allText}}
-        <hr/>
-        <p>Vuex 4.x 的使用</p>
-        <p>计数器：{{store.state.count}}</p>
+        <h2># Vuex 4.x 的使用</h2>
+        <h2>计数器：{{store.state.count}}</h2>
         <el-button  @click="addCount()">点击加1</el-button>
-        <hr/>
-        <p>Axios 的使用</p>
+        <h2># Axios 的使用</h2>
         <el-button  @click="testRequest()">点击请求</el-button>
+        <h2># 返回</h2>
+        <el-button  @click="goBack()">返回</el-button>
     </div>
 </template>
 
-<script lang="ts">
-    import {defineComponent} from 'vue';
-    import {useStore} from "vuex";
-    import {getAllArticleList} from "../config/request_lib/api/api_list";
-
-    export default defineComponent({
-        name: "activity",
-        setup(){
-            let store:any=useStore();
-            function addCount(this:any):void{
-                this.store.commit('addCount');
-            }
-            function testRequest() {
-                let data:any={page:1}
-                let params:object={params:btoa(encodeURIComponent(JSON.stringify(data)))}
-                //请改成你所需要的传参形式
-                getAllArticleList(params).then((res:any)=>{
-                    console.log(res);
-                })
-            }
-            return {
-                store,
-                addCount,
-                testRequest
-            }
-        },
-    })
-</script>
-
-<style scoped>
-    hr{
-        width: 80%;
+<script setup lang="ts">
+    import { useStore } from "vuex";
+    import { useRouter } from "vue-router";
+    import { getAllArticleList } from "../config/request_lib/api/api_list";
+    const store = useStore();
+    const router = useRouter();
+    function addCount(this:any):void{
+      store.commit('addCount');
     }
-</style>
+    function testRequest() {
+      let data = {page:1}
+      let params = {params:btoa(encodeURIComponent(JSON.stringify(data)))}
+      //请改成你所需要的传参形式
+      getAllArticleList(params).then((res)=>{})
+    }
+    const goBack = ():void => {
+      router.push('/');
+    }
+</script>
