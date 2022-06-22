@@ -12,6 +12,11 @@ module.exports = {
         editLinks: true,
         editLinkText: '欢迎帮助我们改善页面!',
         lastUpdated: '最近更新时间',
+        algolia: {
+            appId: 'ZAT3YFXI7L',
+            apiKey: 'ebb9fb0d47df4b30f9e94428e89dad61',
+            indexName: 'vue3-vite-cli'
+        },
         nav: [
             { text: '入门', link: '/getting/why.html' },
             { text: '模板', link: '/template/template-vue3-ts-initial.html' },
