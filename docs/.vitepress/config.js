@@ -23,6 +23,9 @@ export default {
             { text: '相关文档', link: '/documentation/vue.html' },
             { text: '码云', link: 'https://gitee.com/wushijiang13/vue3-vite-cli' },
         ],
+        socialLinks:[
+            { icon: 'github', link: 'https://github.com/wushijiang13/vue3-vite-cli' }
+        ],
         sidebar: [
             // '/getting/': 'auto',
                 {
