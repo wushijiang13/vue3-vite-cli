@@ -1,17 +1,17 @@
-module.exports = {
+export default {
     base:'/vue3-vite-cli/',
     title: 'Vue3-Vite-Cli 中文文档',
     description: '基于vite为基础搭建的风格脚手架,提供多种模板以便于更高效的解决业务需求！',
     lang: 'zh-CN',
     head: [['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo.jpeg' }]],
     themeConfig:{
+        siteTitle:'Vue3-Vite-Cli 中文文档',
         repo: 'wushijiang13/vue3-vite-cli',
         repoLabel:'GitHub',
         docsDir: 'docs',
         docsBranch: 'master',
-        editLinks: true,
-        editLinkText: '欢迎帮助我们改善页面!',
-        lastUpdated: '最近更新时间',
+        lastUpdatedText: '最近更新时间',
+        logo: '/logo.jpeg',
         algolia: {
             appId: 'ZAT3YFXI7L',
             apiKey: 'ebb9fb0d47df4b30f9e94428e89dad61',
@@ -23,49 +23,51 @@ module.exports = {
             { text: '相关文档', link: '/documentation/vue.html' },
             { text: '码云', link: 'https://gitee.com/wushijiang13/vue3-vite-cli' },
         ],
-        sidebar: {
+        sidebar: [
             // '/getting/': 'auto',
-            '/': [
                 {
                     text: '入门',
-                    children: [
+                    items: [
                         {
                             text: '简介',
-                            link: '/getting/why.html'
+                            link: '/getting/why'
                         },
                         {
                             text: '模板脚手架简介',
-                            link: '/getting/template_introduction.html'
+                            link: '/getting/template_introduction'
                         }
                     ]
                 },
                 {
                     text: '模板内部结构解析',
-                    children: [
+                    items: [
                         {
                             text: 'vue3-ts-initial',
-                            link: '/template/template-vue3-ts-initial.html'
+                            link: '/template/template-vue3-ts-initial'
                         },
                         {
                             text: 'webpack-protist-js',
-                            link: '/template/template-webpack-protist-js.html'
+                            link: '/template/template-webpack-protist-js'
                         }
                     ]
                 },
                 {
                     text: '相关文档',
-                    children: [
+                    items: [
                         {
                             text: 'Vue 相关文档',
-                            link: '/documentation/vue.html'
+                            link: '/documentation/vue'
                         },
                         {
                             text: 'Webpack 相关文档',
-                            link: '/documentation/webpack.html'
+                            link: '/documentation/webpack'
                         }
                     ]
                 }
-            ]
+            ],
+        footer: {
+            message: 'MIT Licensed',
+            copyright: 'Copyright © 2019-present 吴先森出品'
         }
     }
 }
