@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Vue3-Vite-Cli
-  text: Vue3-Vite-Cli 中文文档
+  text: 中文文档
   tagline: 基于vite为基础搭建的风格脚手架,提供多种模板以便于更高效的解决业务需求！
   image:
       src: /logo.jpeg
