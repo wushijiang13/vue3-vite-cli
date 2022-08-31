@@ -37,17 +37,6 @@ For details, see <a href="https://wushijiang.cn/vue3-vite-cli/"> documentation <
  create-cli 
 ```
 
-## Screenshot：  
-
-### vue3-ts-initial
-
-![image](https://user-images.githubusercontent.com/38801556/174986723-75e514aa-1e4f-45dc-b407-78107fbd353e.png)
-
-### webpack-protist-js
-
-![image](https://user-images.githubusercontent.com/38801556/164145946-a802d51b-c537-41a8-8ae6-7b560a19dd9e.png)
-
-
 ## Help
  
  gitee backup 👉 <a href="https://gitee.com/wushijiang13/vue3-vite-cli">码云</a>  
