@@ -49,6 +49,10 @@ export default {
                             link: '/template/template-vue3-ts-initial'
                         },
                         {
+                            text: 'vue3-google-extensions',
+                            link: '/template/template-vue3-google-extensions'
+                        },
+                        {
                             text: 'webpack-protist-js',
                             link: '/template/template-webpack-protist-js'
                         }

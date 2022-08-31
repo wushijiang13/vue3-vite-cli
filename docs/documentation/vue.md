@@ -13,7 +13,7 @@
      
    [Vuex4.x 文档](https://next.vuex.vuejs.org/) : `https://next.vuex.vuejs.org/`
      
-   [Vite 2.x 文档](https://vitejs.dev/guide/api-javascript.html) : `https://vitejs.dev/guide/api-javascript.html`
+   [Vite 文档](https://vitejs.dev/guide/api-javascript.html) : `https://vitejs.dev/guide/api-javascript.html`
  
  ### Vue3.x UI库
  

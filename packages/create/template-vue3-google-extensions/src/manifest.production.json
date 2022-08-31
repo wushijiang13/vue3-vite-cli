@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "template-vue3-google-extensions",
+    "description": "this is description",
+    "version": "0.0.1",
+    "options_page": "options.html",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "image/icon.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+//    "permissions":[
+//        "notifications",
+//        "storage"
+//    ],
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "icons": {
+        "16": "image/icon.png",
+        "48": "image/icon-48.png",
+        "128": "image/icon-128.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    }
+}

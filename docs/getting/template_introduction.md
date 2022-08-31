@@ -15,7 +15,16 @@
    
    想要尝试 Vite 和 Vue3 以及 Ts 小伙伴，此乃入门项目最简易最容易上手的学习并使用的项目模板！ 
    
-   [我要使用vue3-ts-initial](http://wushijiang.cn/vue3-vite-cli/template/template-vue3-ts-initial.html)
+   [传送门](http://wushijiang.cn/vue3-vite-cli/template/template-vue3-ts-initial.html)
+
+### vue3-google-extensions
+
+此模板，根据 `Vue-Cli` 搭建的谷歌插件方案（`Vue2`和`V2`标准），升级而成，并以`Google Extensions V3` 版本为默认版本。
+
+此模板修复了 从`Vue2` 升级到 `Vue3` 带来的写法和解析问题，并且将`V3` 常规开发版本，并修复打包兼容问题，规避掉，并支持打包后自动生成`zip`方便开发后直接上传到
+`Google` 插件商店审核。
+
+[传送门](http://wushijiang.cn/vue3-vite-cli/template/template-vue3-google-extensions.html)
 
 ### webpack-protist-js
 
@@ -27,5 +36,5 @@
      
    实乃是想练手原生css骚操作、js奇淫巧技、以原生开发为主的最好伙伴！
     
-   [我要使用webpack-protist-js](http://wushijiang.cn/vue3-vite-cli/template/template-webpack-protist-js.html)
+   [传送门](http://wushijiang.cn/vue3-vite-cli/template/template-webpack-protist-js.html)
 
