@@ -32,6 +32,7 @@ async function init() {
         initial:"vue3-vite-cli",
         choices: [
             { name: 'vue3-ts-initial'},
+            { name: 'vue3-google-extensions'},
             { name: 'webpack-protist-js'},
             { name: 'node-js-demo'},
         ]
