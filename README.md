@@ -16,7 +16,9 @@
 
 ## Status 
 
-Continually updated...
+Continually updated...   
+
+changeLog 👉 <a href="https://github.com/wushijiang13/vue3-vite-cli/blob/master/CHANGELOG.md">CHANGELOG.MD</a>  
 
 ## Documentation
 For details, see <a href="https://wushijiang.cn/vue3-vite-cli/"> documentation </a>  
