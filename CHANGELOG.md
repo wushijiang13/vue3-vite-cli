@@ -1,4 +1,7 @@
 <!--- 变更日志 -->
+## 0.2.2 (2022-9-1)
+-  加入`template-vue3-google-Extensions` 模板，基于Vue3 开发V3 版本 google 插件
+
 ## 0.0.21 (2022-4-20)
 -  加入`template-node-js-demo` 模板，方便在node端运行js demo
 - `template-node-js-demo`、`template-vue3-ts-initial`、`template-webpack-protist-js` 更新为pnpm包管理器
