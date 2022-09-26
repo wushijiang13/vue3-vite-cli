@@ -1,6 +1,6 @@
 {
   "name": "vite-vue3-cli",
-  "version": "0.2.2-bate",
+  "version": "1.0.0",
   "author": "Mr.wu",
   "bin": {
     "create-cli": "./bin/npmrc.js"

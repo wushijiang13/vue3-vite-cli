@@ -1,4 +1,7 @@
 <!--- 变更日志 -->
+## 1.0.0 (2022-9-26)
+-  `template-vue3-ts-initial` 模板，所有依赖升级到最新，`vite`更新到`3.x`。
+
 ## 0.2.2 (2022-9-1)
 -  加入`template-vue3-google-Extensions` 模板，基于Vue3 开发V3 版本 google 插件
 
