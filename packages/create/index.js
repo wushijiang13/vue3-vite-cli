@@ -57,18 +57,19 @@ async function init() {
 
     pkg.name = projectName
 
-    const pkgManager = /yarn/.test(process.env.npm_execpath) ? 'yarn' : 'npm'
+    const pkgManager = /pnpm/.test(process.env.npm_execpath) ? 'pnpm' : /yarn/.test(process.env.npm_execpath) ? 'yarn'
+        : 'npm'
 
     console.log(`\nDone. Now run/完毕。现在运行:`)
 
     console.log(`\nDownloading dependencies.../正在下载依赖...`)
 
-    let downShell=pkgManager === 'yarn' ? '' : 'install';
+    let downShell= pkgManager === 'yarn' ? '' : 'install';
     console.log(`\nrunning/正在运行:${pkgManager+" "+downShell}` );
     const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:'inherit'});
     if(downResult.failed){
         console.error('\nFailed to download dependencies/下载依赖失败 ');
-        console.log(`${pkgManager === 'yarn' ? `yarn` : `npm install`}\n`)
+        console.log(`${pkgManager === 'yarn' ? `yarn` : `${pkgManager} install`}\n`)
     }else{
         console.log(`Depend on the download is complete!/依赖下载完成!🥳`)
     }
@@ -76,7 +77,7 @@ async function init() {
     if (root !== cwd) {
         console.log(`\ncd ${path.relative(cwd, root)}`.green)
     }
-    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `npm run dev`}\n`.green)
+    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `${pkgManager} run dev`}\n`.green)
     }catch (e) {
         
     }
