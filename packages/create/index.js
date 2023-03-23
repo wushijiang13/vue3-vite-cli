@@ -13,7 +13,6 @@ let copySchedule=0;//拷贝进度
 let bar ;//进度条
 
 async function init() {
-    try{
     const renameFiles = {
         _gitignore: '.gitignore'
     }
@@ -21,14 +20,14 @@ async function init() {
     let projectname = await prompt({
         type: 'input',
         name: 'projectName',
-        message:'projectName/项目名',
+        message:'projectName',
         initial:"vue3-vite-cli",
     })
     const projectName=await checkProjectName(projectname.projectName)
     let selectTemplate =  await prompt({
         type: 'select',
         name: 'ProjectTemplate',
-        message: 'Project-template/选择项目模板',
+        message: 'Project-template',
         initial:"vue3-vite-cli",
         choices: [
             { name: 'vue3-ts-initial'},
@@ -37,49 +36,59 @@ async function init() {
             { name: 'node-js-demo'},
         ]
     });
-    const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
-    let root =path.join(cwd,projectName);
-    console.log(`\nScaffolding project in ${projectName}.../创建${projectName}项目中...`)
+    const pkgManager = 'pnpm'
+    try{
+        const templateDir = path.join(__dirname, `template-${selectTemplate.ProjectTemplate}`)
+        let root =path.join(cwd,projectName);
+        console.log(`\nScaffolding project in ${projectName}...`)
 
-    emptyDir(root);
+        emptyDir(root);
 
-    calculateCount(path.join(templateDir));
+        calculateCount(path.join(templateDir));
 
-    bar =new progressBar('Current creation progress/当前创建进度: :bar :percent ', { total: copyCount ,
-        complete: "█",
-        incomplete:"░",
-        width: 30,
-    });
+        bar =new progressBar('Current creation progress: :bar :percent ', { total: copyCount ,
+            complete: "█",
+            incomplete:"░",
+            width: 30,
+        });
 
-    await copy(path.join(templateDir), root);
+        await copy(path.join(templateDir), root);
 
-    const pkg = require(path.join(templateDir, `package.json`))
+        const pkg = require(path.join(templateDir, `package.json`))
 
-    pkg.name = projectName
+        pkg.name = projectName
 
-    const pkgManager = /pnpm/.test(process.env.npm_execpath) ? 'pnpm' : /yarn/.test(process.env.npm_execpath) ? 'yarn'
-        : 'npm'
 
-    console.log(`\nDone. Now run/完毕。现在运行:`)
+        console.log(`\nDone. Now run:`)
 
-    console.log(`\nDownloading dependencies.../正在下载依赖...`)
+        console.log(`\nDownloading node_modules...`)
 
-    let downShell= pkgManager === 'yarn' ? '' : 'install';
-    console.log(`\nrunning/正在运行:${pkgManager+" "+downShell}` );
-    const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:'inherit'});
-    if(downResult.failed){
-        console.error('\nFailed to download dependencies/下载依赖失败 ');
-        console.log(`${pkgManager === 'yarn' ? `yarn` : `${pkgManager} install`}\n`)
-    }else{
-        console.log(`Depend on the download is complete!/依赖下载完成!🥳`)
-    }
+        let downShell= pkgManager === 'yarn' ? '' : 'install';
+        console.log(`\nrunning:${pkgManager+" "+downShell}` );
+        const downResult = await execa(`${pkgManager}`, [downShell],{cwd:path.relative(cwd, root),stdio:'inherit'});
 
-    if (root !== cwd) {
-        console.log(`\ncd ${path.relative(cwd, root)}`.green)
-    }
-    console.log(`${pkgManager === 'yarn' ? `yarn dev` : `${pkgManager} run dev`}\n`.green)
+        if(downResult.failed){
+            console.error('\nFailed to download node_modules ');
+            console.log(`${pkgManager === 'yarn' ? `yarn ` : `${pkgManager} install `}\n`)
+        }else{
+            console.log(`Depend on the download is complete!🥳`)
+        }
+
+        if (root !== cwd) {
+            console.log(`\ncd ${path.relative(cwd, root)}`.green)
+        }
+        console.log(`${pkgManager === 'yarn' ? `yarn dev` : `${pkgManager} run dev`}\n`.green)
     }catch (e) {
-        
+        if (e.shortMessage.includes('Command failed with ENOENT: pnpm install')) {
+            console.error('\nCommand failed with ENOENT: pnpm install ');
+            let root = path.join(cwd,projectName);
+            console.log(`\nnpm i ${pkgManager} -g`.green)
+            if (root !== cwd) {
+                console.log(`cd ${path.relative(cwd, root)}`.green)
+            }
+            console.log(`${pkgManager === 'yarn' ? `yarn` : `${pkgManager} install`}`.green)
+            console.log(`${pkgManager === 'yarn' ? `yarn dev` : `${pkgManager} run dev`}\n`.green)
+        }
     }
 }
 
@@ -92,7 +101,7 @@ async function copy(src, dest) {
       await fs.copyFileSync(src, dest)
     }
     if (bar.complete) {
-        log('\nCreated/创建完成\n'.green);
+        log('\nCreate successed\n'.green);
     }else{
         bar.tick(copySchedule/(copyCount/100));
     }
@@ -106,8 +115,8 @@ async function checkProjectName(projectName) {
             let coverQuerySelect =  await prompt({
                 type: 'select',
                 name: 'coverQuery',
-                message: 'The current file name already exists, do you want to overwrite it?/当前文件名已存在，是否覆盖？',
-                initial:"yes/确认",
+                message: 'The current file name already exists, do you want to overwrite it? ',
+                initial:"yes",
                 choices: [
                     { name: 'yes'},
                     { name: 'no'},
