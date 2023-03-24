@@ -30,6 +30,7 @@ async function init() {
         message: 'Project-template',
         initial:"vue3-vite-cli",
         choices: [
+            { name: 'vue3-ts'},
             { name: 'vue3-ts-initial'},
             { name: 'vue3-google-extensions'},
             { name: 'webpack-protist-js'},
