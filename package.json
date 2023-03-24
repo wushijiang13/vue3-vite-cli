@@ -8,8 +8,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "test":"node ./packages/create/test.js"
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
     "@types/node": "^14.14.41",
