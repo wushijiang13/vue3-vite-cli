@@ -1,1 +1,0 @@
-import{_ as a,c as s,o as e,Q as t}from"./chunks/framework.911d3385.js";const v=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"getting/why.md"}'),n={name:"getting/why.md"},l=t("",8),o=[l];function c(p,i,r,d,h,u){return e(),s("div",null,o)}const m=a(n,[["render",c]]);export{v as __pageData,m as default};
