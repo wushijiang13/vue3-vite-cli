@@ -19,8 +19,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
- build:
-  runs-on: ubuntu-latest
+   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
 
   steps:
   - name: Checkout code 
@@ -28,8 +31,6 @@ jobs:
 
   - name: Use Node.js
     uses: actions/setup-node@v3
-    with: 
-     node-version: '18'
 
   - name: pnpm
     uses: pnpm/action-setup@v2
@@ -40,7 +41,7 @@ jobs:
     run: pnpm install --no-frozen-lockfile && pnpm install
 
   - name: Build
-    run: pnpm docs:build 
+    run: pnpm run docs:build 
 
   - name: Setup Pages
     uses: actions/configure-pages@v3
