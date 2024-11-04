@@ -1,5 +1,5 @@
 export default {
-    base:'/vue3-vite-cli/',
+    base:'./',
     title: 'Vue3-Vite-Cli 中文文档',
     description: '基于vite为基础搭建的风格脚手架,提供多种模板以便于更高效的解决业务需求！',
     lang: 'zh-CN',
